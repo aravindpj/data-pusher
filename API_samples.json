@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "7fb40ca1-f997-4006-895f-5bbc2b78db2c",
+		"name": "DataPusher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22641994"
+	},
+	"item": [
+		{
+			"name": "create account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"json@example.com\",\n  \"account_name\": \"json\",\n  \"website\": \"https://json.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/accounts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get accounts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"aravind@example.com\",\n  \"account_name\": \"aravind\",\n  \"website\": \"https://aravind.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/accounts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get account by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"aravind@example.com\",\n  \"account_name\": \"aravind\",\n  \"website\": \"https://aravind.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/accounts/6057fb65-7f6c-4414-97c0-2cc48dcbae6c",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"accounts",
+						"6057fb65-7f6c-4414-97c0-2cc48dcbae6c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"aravindpj@example.com\",\n  \"account_name\": \"aravind pj\",\n  \"website\": \"https://aravindpj.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/accounts/6057fb65-7f6c-4414-97c0-2cc48dcbae6c",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"accounts",
+						"6057fb65-7f6c-4414-97c0-2cc48dcbae6c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete account",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"aravindpj@example.com\",\n  \"account_name\": \"aravind pj\",\n  \"website\": \"https://aravindpj.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/accounts/368a71c1-8f7e-4eef-bdc7-7e392a78b320",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"accounts",
+						"368a71c1-8f7e-4eef-bdc7-7e392a78b320"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create destination",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"url\": \"https://webhook.site/YOUR_UNIQUE_WEBHOOK_ID\",\n  \"http_method\": \"POST\",\n  \"headers\": {\n    \"Authorization\": \"Bearer YOUR_API_KEY\",\n    \"Content-Type\": \"application/json\",\n    \"X-Custom-Data\": \"some-value\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/accounts/63e45743-2f06-4aea-a8b6-31ed2b9ca11c/destinations",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"accounts",
+						"63e45743-2f06-4aea-a8b6-31ed2b9ca11c",
+						"destinations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all destination",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"url\": \"https://webhook.site/YOUR_UNIQUE_WEBHOOK_ID\",\n  \"http_method\": \"POST\",\n  \"headers\": {\n    \"Authorization\": \"Bearer YOUR_API_KEY\",\n    \"Content-Type\": \"application/json\",\n    \"X-Custom-Data\": \"some-value\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/accounts/6057fb65-7f6c-4414-97c0-2cc48dcbae6c/destinations",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"accounts",
+						"6057fb65-7f6c-4414-97c0-2cc48dcbae6c",
+						"destinations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get specific destination",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"url\": \"https://webhook.site/YOUR_UNIQUE_WEBHOOK_ID\",\n  \"http_method\": \"POST\",\n  \"headers\": {\n    \"Authorization\": \"Bearer YOUR_API_KEY\",\n    \"Content-Type\": \"application/json\",\n    \"X-Custom-Data\": \"some-value\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/accounts/6057fb65-7f6c-4414-97c0-2cc48dcbae6c/destinations/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"accounts",
+						"6057fb65-7f6c-4414-97c0-2cc48dcbae6c",
+						"destinations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update specific destination",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"url\": \"https://webhook.site/aravind/YOUR_UNIQUE_WEBHOOK_ID\",\n  \"http_method\": \"POST\",\n  \"headers\": {\n    \"Authorization\": \"Bearer YOUR_API_KEY\",\n    \"Content-Type\": \"application/json\",\n    \"X-Custom-Data\": \"some-value\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/accounts/6057fb65-7f6c-4414-97c0-2cc48dcbae6c/destinations/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"accounts",
+						"6057fb65-7f6c-4414-97c0-2cc48dcbae6c",
+						"destinations",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete specific destination",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"url\": \"https://webhook.site/aravind/YOUR_UNIQUE_WEBHOOK_ID\",\n  \"http_method\": \"POST\",\n  \"headers\": {\n    \"Authorization\": \"Bearer YOUR_API_KEY\",\n    \"Content-Type\": \"application/json\",\n    \"X-Custom-Data\": \"some-value\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/accounts/6057fb65-7f6c-4414-97c0-2cc48dcbae6c/destinations/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"accounts",
+						"6057fb65-7f6c-4414-97c0-2cc48dcbae6c",
+						"destinations",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "data handler",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "CL-X-TOKEN",
+						"value": "7c088c6f-11bc-4e2d-9e71-a5c4668d4bda",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"event_type\": \"user_activity\",\n  \"user\": {\n    \"id\": \"2\",\n    \"name\": \"Aravind\"\n  },\n  \"timestamp\": \"2024-06-03T14:30:00Z\",\n  \"details\": {\n    \"action\": \"item_purchased\",\n    \"item_id\": \"product-xyz\",\n    \"quantity\": 1\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/server/incoming_data",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"server",
+						"incoming_data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
